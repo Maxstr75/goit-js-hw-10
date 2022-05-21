@@ -50,7 +50,7 @@ function renderCountryInfo(countries) {
   const markup = countries
     .map(({ capital, population, languages }) => {
       return `
-        <ul class - "country-info_list">
+        <ul class = "country-info_list">
             <li class = "country-info_item"><p><b>Capital: </b>${capital}</p></li>
             <li class = "country-info_item"><p><b>Population: </b>${population}</p></li>
             <li class = "country-info_item"><p><b>languages: </b>${Object.values(languages).join(
