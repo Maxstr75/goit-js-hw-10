@@ -31,3 +31,17 @@ function onCountryInput() {
     })
     .catch(alertWrongName);
 }
+
+function renderCountryList(countries) {
+  const markup = countries
+    .map(({ name, flags }) => {
+      return `
+        <li class = "country-list_item">
+            <img class = "country-list_flag" src = "${flags.svg}" alt = "Flag of ${name.official}"width = 40px height = 40px>
+            <h2 class = "country-list_name">${name.official}</h2>
+            </li>
+            `;
+    })
+    .join('');
+  return markup;
+}
